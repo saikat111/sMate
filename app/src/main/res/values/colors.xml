@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#1a1a2e</color>
+  <!--  <color name="colorPrimary">#ee784c</color>-->
+    <color name="colorPrimaryDark">#1a1a2e</color>
+
+    <!--colors for modern ui-->
+    <color name="whiteTextColor">#fff</color>
+    <color name="primaryTextColor">#00a5ff</color>
+    <color name="black">#000000</color>
+
+    <color name="tab_background_selected">#1a1a2e</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grid_bg">#ffffff</color>
+    <color name="tab_background_unselected">#000027</color>
+
+    <color name="hint">#bfbfbf</color>
+
+    <color name="colorPrimary">#1a1a2e</color>
+    <color name="movie_card">#000027</color>
+    <color name="text_color">#DDE0D8</color>
+    <color name="rating">#BAF951</color>
+    <color name="toolbar_color">#16213e</color>
+    <color name="vote_color">#B6EC5E</color>
+    <color name="text_color_2">#6FA813</color>
+</resources>

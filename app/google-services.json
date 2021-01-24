@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "493007094293",
+    "project_id": "all-in-one-downloader-a46b9",
+    "storage_bucket": "all-in-one-downloader-a46b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493007094293:android:e15042e942a0028da3041c",
+        "android_client_info": {
+          "package_name": "com.codingburg.downloader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493007094293-hb1qgt6ubmk61djuin0jt288ekvj4eg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4_LSdLDqCGOcKtAp9_KggWPHgu9V4hFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "493007094293-hb1qgt6ubmk61djuin0jt288ekvj4eg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

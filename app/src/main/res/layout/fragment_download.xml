@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.DownloadFrag">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="75dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <include layout="@layout/shimmer_layout"></include>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/MainRelativeLayout"
+            android:layout_marginBottom="75dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/lnr_main"
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/RLTopMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:id="@+id/RLEdittextLayout"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:elevation="3dp">
+
+                        <EditText
+                            android:id="@+id/et_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_toLeftOf="@+id/imDownload"
+                            android:background="@drawable/et_back_new"
+                            android:drawableLeft="@drawable/ic_link"
+                            android:drawablePadding="10dp"
+                            android:hint="@string/paste_link"
+                            android:maxLines="1"
+                            android:padding="15dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textColorHint="@color/hint"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/imClear"
+                            android:background="@drawable/et_back_new"
+                            android:padding="12dp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_x_mark"
+                            app:tint="@color/colorPrimaryDark"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="51dp"
+                            android:layout_toLeftOf="@+id/imDownload"/>
+
+                        <ImageView
+                            android:id="@+id/imDownload"
+                            android:background="@drawable/et_back_new"
+                            android:padding="12dp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_download"
+                            app:tint="@color/colorPrimaryDark"
+                            android:layout_alignParentRight="true"
+                            android:backgroundTint="@color/white"/>
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:textSize="16sp"
+                        android:textColor="@color/text_color"
+                        android:id="@+id/tvDOptionsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/RLEdittextLayout"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/downloading_options"
+                        android:layout_marginStart="20dp"/>
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:clipToPadding="false"
+                    android:id="@+id/recycler_view"
+                    >
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">sMate</string>
+    <string name="message">Message</string>
+    <string name="send">Send</string>
+    <string name="Download">Download</string>
+    <string name="URL">Video URL</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="mobno">Mobile No.</string>
+    <string name="reg_no">Reg</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment Downloader</string>
+    <string name="hello_blank_fragment_1">Hello blank fragment History</string>
+
+    <string name="NoExternalStoragepermission">Hello blank fragment History</string>
+    <string name="PermissionDenied">PermissionDenied</string>
+    <string name="downloading_options">Supported Websites</string>
+    <string name="title">title</string>
+    <string name="share_chat_app_name">Loading...</string>
+    <string name="paste_link">Paste Link....</string>
+
+    <string name="Sizeunknown">Size: unknown</string>
+    <string name="DownloadingStarted">Downloading Started</string>
+    <string name="ErrorwhileDownloading">Error while Downloading Video</string>
+    <string name="Play">Play</string>
+    <string name="Share">Share</string>
+    <string name="ShareUsing">Share Using...</string>
+    <string name="Delete">Delete</string>
+    <string name="DownloadFailed">Download Failed</string>
+    <string name="NoVideoFound">No Downloadable Video found</string>
+    <string name="PleasevalidEnterLink">Please valid Enter Link</string>
+    <string name="Copyrightcontent">We do not pramote To download Copyright content. !</string>
+    <string name="DeleteConfirm">Do you really want to delete this file ?</string>
+    <string name="DeletedSuccessfully">File Deleted Successfully</string>
+    <string name="UnabletoDeletefile">Unable to Delete file</string>
+    <string name="StoragePermissionWarning">The app was not allowed to read or write to your storage. Hence, it cannot function properly. Please consider granting it this permission</string>
+    <string name="PrivacyPolicy">Privacy Policy</string>
+    <string name="Close">Close</string>
+    <string name="Downloader">Downloader</string>
+    <string name="History">History</string>
+    <string name="VideoSize">Video Size</string>
+    <string name="Filename">File name</string>
+    <string name="Loading">Loading...</string>
+
+
+    <string name="AdmobPUB_Id" tools:ignore="MissingTranslation">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="AdmobBanner_1" tools:ignore="MissingTranslation">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="AdmobInterstitial" tools:ignore="MissingTranslation">ca-app-pub-3940256099942544/1033173712</string>
+
+</resources>

@@ -97,22 +97,26 @@ public class HistoryFrag extends Fragment implements DataSavedListener {
         String absolutePathOfImage = null;
         uri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
         String[] projection = {MediaStore.MediaColumns.DATA, MediaStore.Video.Media.BUCKET_DISPLAY_NAME,MediaStore.Video.Media._ID,MediaStore.Video.Thumbnails.DATA,MediaStore.MediaColumns.DATE_MODIFIED};
-
-        final String orderBy = MediaStore.Images.Media.DATE_MODIFIED;
-        cursor = getActivity().getApplicationContext().getContentResolver().query(uri, projection, MediaStore.Images.Media.DATA + " like ? ", new String[] {"%/AllInOneVD/%"}, orderBy + " DESC");
-        column_index_data = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.DATA);
-        thum = cursor.getColumnIndexOrThrow(MediaStore.Video.Thumbnails.DATA);
-        while (cursor.moveToNext()) {
-            absolutePathOfImage = cursor.getString(column_index_data);
-            if((new File(absolutePathOfImage).exists()))
-            {
-                Model_Video obj_model = new Model_Video();
-                obj_model.setBoolean_selected(false);
-                obj_model.setStr_path(absolutePathOfImage);
-                obj_model.setStr_thumb(cursor.getString(thum));
-                al_video.add(obj_model);
-            }
+try{
+    final String orderBy = MediaStore.Images.Media.DATE_MODIFIED;
+    cursor = getActivity().getApplicationContext().getContentResolver().query(uri, projection, MediaStore.Images.Media.DATA + " like ? ", new String[] {"%/AllInOneVD/%"}, orderBy + " DESC");
+    column_index_data = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.DATA);
+    thum = cursor.getColumnIndexOrThrow(MediaStore.Video.Thumbnails.DATA);
+    while (cursor.moveToNext()) {
+        absolutePathOfImage = cursor.getString(column_index_data);
+        if((new File(absolutePathOfImage).exists()))
+        {
+            Model_Video obj_model = new Model_Video();
+            obj_model.setBoolean_selected(false);
+            obj_model.setStr_path(absolutePathOfImage);
+            obj_model.setStr_thumb(cursor.getString(thum));
+            al_video.add(obj_model);
         }
+    }
+} catch (Exception e) {
+    e.printStackTrace();
+}
+
         LoadFiles();
     }
 
@@ -133,7 +137,7 @@ public class HistoryFrag extends Fragment implements DataSavedListener {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setTitle(R.string.app_name);
         builder.setMessage(mContect.getResources().getString(R.string.DeleteConfirm)  );
-        builder.setIcon(R.mipmap.flirt_icon);
+        builder.setIcon(R.drawable.flirt_icon);
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 File fdelete = new File(index).getAbsoluteFile();

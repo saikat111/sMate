@@ -138,7 +138,7 @@ public class download_result extends AppCompatActivity {
 
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
-                    .url( Utils.MAINURL +"/services/downloader_api.php")
+                    .url( Utils.APIURL +"/services/downloader_api.php")
                     .post( formBody)
                     .build();
             try {

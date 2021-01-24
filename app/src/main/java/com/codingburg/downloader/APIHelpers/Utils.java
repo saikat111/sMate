@@ -13,18 +13,18 @@ import java.util.regex.Pattern;
 
 public class Utils
 {
-    public static String BaseAppDirName ="sMate";
+    public static String AppDirName="AllInOneVD";
     public static File RootDirectoryShow = null;
-    public static String MAINURL ="http://download.shulovshop.com/";
-    public static String API_LOGO_DIR_URL= MAINURL +"/logos/";
+    public static String APIURL="http://download.shulovshop.com/";
+    public static String API_LOGO_DIR_URL=APIURL+"/logos/";
     public static String API_LOGO_Imagetype="webp";
 
-    public static String RootDirectory = "/"+ BaseAppDirName +"/";
+    public static String RootDirectory = "/"+AppDirName+"/";
 
     static {
         StringBuilder sb = new StringBuilder();
         sb.append(Environment.getExternalStorageDirectory());
-        sb.append("/Download/"+ BaseAppDirName);
+        sb.append("/Download/"+ AppDirName);
         RootDirectoryShow = new File(sb.toString());
     }
 

@@ -127,7 +127,7 @@ public class DownloadFrag extends Fragment {
 
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
-                    .url( Utils.MAINURL +"/js/services.json")
+                    .url( Utils.APIURL +"/js/services.json")
                     .get()
                     .build();
             Response response = null;

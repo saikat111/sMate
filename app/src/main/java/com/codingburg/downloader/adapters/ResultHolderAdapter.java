@@ -147,7 +147,7 @@ public class ResultHolderAdapter extends RecyclerView.Adapter <ResultHolderAdapt
                 String URL= URLEncoder.encode(strings[0],"UTF-8");
                 _Title=strings[1];
                 Request request = new Request.Builder()
-                        .url(Utils.MAINURL + "/download.php?type=v&url="+URL+"&title="+strings[1])
+                        .url(Utils.APIURL + "/download.php?type=v&url="+URL+"&title="+strings[1])
                         .get()
                         .build();
                 Response response = null;
@@ -173,7 +173,7 @@ public class ResultHolderAdapter extends RecyclerView.Adapter <ResultHolderAdapt
            {
                Document doc = Jsoup.parse(b);
                String DownloadURL=  doc.select("a").last().attr("href");
-               DownloadURL= Utils.MAINURL + ""+DownloadURL;
+               DownloadURL= Utils.APIURL + ""+DownloadURL;
                String DownloadableURL=DownloadURL;
                StringBuilder sb = new StringBuilder();
                sb.append(Utils.SanitizeName(_Title));

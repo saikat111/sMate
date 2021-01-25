@@ -13,8 +13,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.codingburg.downloader.APIHelpers.Utils;
-import com.codingburg.downloader.Models.ApiResultModel;
-import com.codingburg.downloader.Models.VideoResultModel;
+import com.codingburg.downloader.Models.ApiModel;
+import com.codingburg.downloader.Models.ResultModel;
 import com.codingburg.downloader.R;
 import com.codingburg.downloader.adapters.ResultHolderAdapter;
 import com.codingburg.downloader.interfaces.AsyncResponse;
@@ -43,7 +43,7 @@ public class download_result extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_download_result);
+        setContentView(R.layout.download_result);
         Bundle bundle = getIntent().getExtras();
         String URL ="";
 
@@ -155,9 +155,9 @@ public class download_result extends AppCompatActivity {
         @Override
         protected void onPostExecute(String b ){
                 try {
-                    ApiResultModel apiResultModel=new ApiResultModel();
-                    List<VideoResultModel> videoResultList=new ArrayList<>();
-                    VideoResultModel VideoResult;
+                    ApiModel apiModel =new ApiModel();
+                    List<ResultModel> videoResultList=new ArrayList<>();
+                    ResultModel VideoResult;
 
                     JSONObject bObject=new JSONObject(b);
                     JSONArray vArray=bObject.getJSONArray("VideoResult");
@@ -167,7 +167,7 @@ public class download_result extends AppCompatActivity {
                     }catch (Exception ex){}
                     for (int i = 0; i < vArray.length(); i++){
                         JSONObject cArrayObject=vArray.getJSONObject(i);
-                        VideoResult=new VideoResultModel();
+                        VideoResult=new ResultModel();
                         VideoResult.setAudioUrl( cArrayObject.getString("AudioUrl") );
                         VideoResult.setFileSize( cArrayObject.getString("FileSize") );
                         VideoResult.setQuality( cArrayObject.getString("Quality") );
@@ -177,8 +177,8 @@ public class download_result extends AppCompatActivity {
                         VideoResult.setThumbnil( cArrayObject.getString("thumbnil") );
                         videoResultList.add(VideoResult);
                     }
-                    apiResultModel.setVideoResult(videoResultList);
-                    apiResultModel.setStatus(bObject.getString("Status"));
+                    apiModel.setVideoResult(videoResultList);
+                    apiModel.setStatus(bObject.getString("Status"));
 
 
                     ResultHolderAdapter adapter=new ResultHolderAdapter( c,videoResultList,IsExtirnal,download_result.this) ;

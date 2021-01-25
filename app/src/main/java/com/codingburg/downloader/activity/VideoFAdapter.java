@@ -16,7 +16,7 @@ import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.codingburg.downloader.BuildConfig;
-import com.codingburg.downloader.Models.Model_Video;
+import com.codingburg.downloader.Models.ModelVideo;
 import com.codingburg.downloader.R;
 import com.codingburg.downloader.interfaces.OnFileDelete;
 import com.bumptech.glide.Glide;
@@ -27,7 +27,7 @@ import java.util.ArrayList;
 
 public class VideoFolderAdapter extends RecyclerView.Adapter<VideoFolderAdapter.ViewHolder> {
 
-    ArrayList<Model_Video> al_video;
+    ArrayList<ModelVideo> al_video;
     Context context;
     Activity activity;
     private OnFileDelete onFileDelete;
@@ -36,7 +36,7 @@ public class VideoFolderAdapter extends RecyclerView.Adapter<VideoFolderAdapter.
         onFileDelete = l;
     }
 
-    public VideoFolderAdapter(Context context, ArrayList<Model_Video> al_video, Activity activity) {
+    public VideoFolderAdapter(Context context, ArrayList<ModelVideo> al_video, Activity activity) {
 
         this.al_video = al_video;
         this.context = context;

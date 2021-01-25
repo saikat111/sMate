@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <include layout="@layout/shimmer_result_layout"></include>
+        <include layout="@layout/result_layout"></include>
     </com.facebook.shimmer.ShimmerFrameLayout>
 
     <LinearLayout
